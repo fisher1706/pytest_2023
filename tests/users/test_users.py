@@ -1,8 +1,11 @@
+import pytest
+import time
 from src.base_classes.response import Response
 from src.schemas.user import User
 
 
 def test_getting_user_list(get_users, get_number, say_hello, calculate, make_number):
+    time.sleep(4)
     test_object = Response(get_users)
     test_object.assert_status_code(200).validate(User)
 
@@ -16,5 +19,17 @@ def test_getting_user_list(get_users, get_number, say_hello, calculate, make_num
     print(f"\nfixture_number: {make_number}")
 
 
+@pytest.mark.development
+@pytest.mark.production
+@pytest.mark.skip('[ISSUE-23414] Issue with network connection')
 def test_another():
     assert 1 == 1
+
+
+@pytest.mark.development
+@pytest.mark.parametrize('first_value, second_value, result', [
+    (1, 2, 3),
+    (-1, -2, -3)
+])
+def test_calculator(first_value, second_value, result, calculate):
+    assert result == calculate(first_value, second_value)

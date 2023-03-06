@@ -1,6 +1,8 @@
 import pytest
 from random import randrange
 
+from src.generators.player import Player
+
 
 @pytest.fixture(scope='session')
 def say_hello():
@@ -31,3 +33,10 @@ def make_number():
     number = randrange(1, 1000, 5)
     yield number
     print(f"\nNumber at home {number}")
+
+
+@pytest.fixture()
+def get_player_generator():
+    return Player()
+
+

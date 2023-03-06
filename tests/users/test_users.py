@@ -23,6 +23,10 @@ def test_getting_user_list(get_users, get_number, say_hello, calculate, make_num
 @pytest.mark.production
 @pytest.mark.skip('[ISSUE-23414] Issue with network connection')
 def test_another():
+    """
+    In that we try to check that 1 is equal 1
+    :return:
+    """
     assert 1 == 1
 
 
@@ -32,4 +36,12 @@ def test_another():
     (-1, -2, -3)
 ])
 def test_calculator(first_value, second_value, result, calculate):
+    """
+    In this test we check calculator
+    :param first_value:
+    :param second_value:
+    :param result:
+    :param calculate:
+    :return:
+    """
     assert result == calculate(first_value, second_value)

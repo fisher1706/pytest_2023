@@ -2,6 +2,8 @@ import pytest
 import time
 from src.base_classes.response import Response
 from src.schemas.user import User
+from src.schemas.computer import Computer
+from examples import computer
 
 
 def test_getting_user_list(get_users, get_number, say_hello, calculate, make_number):
@@ -45,3 +47,10 @@ def test_calculator(first_value, second_value, result, calculate):
     :return:
     """
     assert result == calculate(first_value, second_value)
+
+
+def test_pydantic_object():
+    comp = Computer.parse_obj(computer)
+    print(comp.detailed_info)
+    print(comp.detailed_info.physical.photo)
+    print(comp.schema_json())

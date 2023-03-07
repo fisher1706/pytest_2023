@@ -1,19 +1,20 @@
 import pytest
 
 from src.generators.plaer_localization import PlayerLocalization
+from src.enums.user_enums import Statuses
 
 
 def test_something_one(get_number):
     assert 1 == 1
-
     print(f"\nfrom get_number: {get_number}")
 
 
 @pytest.mark.parametrize("status", [
-    "ACTIVE",
-    "BANNED",
-    "DELETED",
-    "INACTIVE"
+    # "ACTIVE",
+    # "BANNED",
+    # "DELETED",
+    # "INACTIVE"
+    *Statuses.list()
 ])
 def test_something_two(status, get_player_generator):
     print(get_player_generator.set_status(status).build())

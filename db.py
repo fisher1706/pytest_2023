@@ -6,6 +6,5 @@ from configuration import CONNECTION_ROW
 
 Model = declarative_base(name='Model')
 engine = create_engine(CONNECTION_ROW, echo=True)
-# Session = sessionmaker(engine, autoflush=False, autocomit=False)
 Session = sessionmaker(engine, autoflush=False, autocommit=False)
 session = Session()

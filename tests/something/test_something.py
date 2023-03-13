@@ -1,4 +1,5 @@
 import pytest
+import tables
 
 from src.generators.plaer_localization import PlayerLocalization
 from src.enums.user_enums import Statuses
@@ -53,3 +54,22 @@ def test_something_fifth(get_player_generator, localizations, loc):
         .build()
     ).build()
     print(object_to_send)
+
+
+def test_get_data_films(get_db_session):
+    data = get_db_session.query(tables.Films).first()
+    print(f"\ntitle: {data.title}")
+
+
+def test_try_to_delete_something(get_delete_method, get_db_session):
+    get_delete_method(get_db_session, tables.ItemType, tables.ItemType.item_id == 3)
+
+
+def test_try_to_add_test_data(get_db_session, get_add_method, get_item_type_generator):
+    item = tables.ItemType(**get_item_type_generator.build())
+    get_add_method(get_db_session, item)
+    print(f"\nnew_item_id: {item.item_id}")
+
+
+def test_try_to_add_test_data_new(generate_item_type):
+    print(f"\nnew_item_id: {generate_item_type.item_id}")

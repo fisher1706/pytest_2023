@@ -1,0 +1,1 @@
+tests/hooks_example/tests_hooks.py::test_failed

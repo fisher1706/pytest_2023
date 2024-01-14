@@ -16,4 +16,3 @@ class ItemType(Model):
 
     item_id = Column(Integer, primary_key=True)
     item_type = Column(String)
-

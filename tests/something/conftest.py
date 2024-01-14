@@ -3,7 +3,7 @@ import pytest
 
 @pytest.fixture()
 def get_testing_scenarios(request):
-    # print(f"param: {request.param}")
+    print(f"param: {request.param}")
 
     if request.param == "scenario_1":
         return {"name": "John"}

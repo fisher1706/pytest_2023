@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="twoe_hd_kino" uuid="4f270bd1-a155-4091-93a4-3b57d47d1bae">
+    <data-source source="LOCAL" name="twoe_hd_kino@localhost" uuid="f43b1093-6ca2-48df-9383-33f766e8b388">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

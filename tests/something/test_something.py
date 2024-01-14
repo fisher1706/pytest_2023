@@ -66,6 +66,8 @@ def test_try_to_delete_something(get_delete_method, get_db_session):
 
 
 def test_try_to_add_test_data(get_db_session, get_add_method, get_item_type_generator):
+    print('\n', get_item_type_generator.build())
+    print('\n', tables.ItemType(**get_item_type_generator.build()))
     item = tables.ItemType(**get_item_type_generator.build())
     get_add_method(get_db_session, item)
     print(f"\nnew_item_id: {item.item_id}")

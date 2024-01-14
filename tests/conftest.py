@@ -84,5 +84,3 @@ def generate_item_type(get_db_session, get_item_type_generator, get_add_method, 
     yield item
     get_delete_method(get_db_session, tables.ItemType, tables.ItemType.item_id == item.item_id)
     print(f"delete from: {tables.ItemType} - id: {item.item_id}")
-
-

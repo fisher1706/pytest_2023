@@ -1,7 +1,6 @@
 FROM python:3.8-alpine
 
 ARG run_env
-
 ENV env $run_env
 
 LABEL "channel"="SolveMe"

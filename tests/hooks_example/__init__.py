@@ -1,1 +1,0 @@
-# https://www.codementor.io/@adammertz/writing-a-simple-pytest-hook-zc5wvoj5t

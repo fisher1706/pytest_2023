@@ -22,6 +22,7 @@ def get_magic_method():
     return _magic_method
 
 
+# TODO: use fixture from "get_number" from "main" conftest
 @pytest.fixture()
 def get_magic_method_two(get_number):
     print(f"\nget number: {get_number}")

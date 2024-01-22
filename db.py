@@ -13,3 +13,5 @@ Session = sessionmaker(engine,
                        autoflush=False,
                        autocommit=False
                        )
+
+session = Session()

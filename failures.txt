@@ -1,1 +1,3 @@
-tests/hooks_example/tests_hooks.py::test_failed
+tests/hooks_example_three/tests_hooks_three.py::test_failed_two_three
+tests/hooks_example_three/test_hooks_three.py::test_failed_two_three
+tests/hooks_example_two/test_hooks_two.py::test_failed_two

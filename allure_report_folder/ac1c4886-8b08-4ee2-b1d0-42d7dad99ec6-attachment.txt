@@ -1,0 +1,4 @@
+[32mINFO    [0m sqlalchemy.engine.Engine:base.py:1091 BEGIN (implicit)
+[32mINFO    [0m sqlalchemy.engine.Engine:base.py:1901 DELETE FROM item_type WHERE item_type.item_id = %(item_id_1)s
+[32mINFO    [0m sqlalchemy.engine.Engine:base.py:1906 [generated in 0.00035s] {'item_id_1': 3}
+[32mINFO    [0m sqlalchemy.engine.Engine:base.py:1134 COMMIT

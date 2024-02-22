@@ -73,3 +73,7 @@ def test_try_to_add_test_data(get_db_session, get_add_method, get_item_type_gene
 
 def test_try_to_add_test_data_new(generate_item_type):
     print(f"\nnew_item_id: {generate_item_type.item_id}")
+
+
+def test_failed():
+    assert 1 == 2

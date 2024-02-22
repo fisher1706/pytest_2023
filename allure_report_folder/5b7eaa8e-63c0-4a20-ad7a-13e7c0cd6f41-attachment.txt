@@ -1,0 +1,6 @@
+[32mINFO    [0m sqlalchemy.engine.Engine:base.py:1091 BEGIN (implicit)
+[32mINFO    [0m sqlalchemy.engine.Engine:base.py:1901 SELECT films.film_id AS films_film_id, films.status AS films_status, films.title AS films_title, films.is_premiere AS films_is_premiere 
+FROM films 
+ LIMIT %(param_1)s
+[32mINFO    [0m sqlalchemy.engine.Engine:base.py:1906 [generated in 0.00017s] {'param_1': 1}
+[32mINFO    [0m sqlalchemy.engine.Engine:base.py:1117 ROLLBACK

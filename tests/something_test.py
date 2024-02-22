@@ -2,7 +2,7 @@ import requests
 
 from configuration import SERVICE_URL
 from src.base_classes.response import Response
-from src.schemas.user import User
+from src.pydantic_schemas.user import User
 
 
 def test_getting_user_list():

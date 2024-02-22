@@ -15,3 +15,16 @@ class User(BaseModel):
             return email
         else:
             raise ValueError(UserErrors.WRONG_EMAIL.value)
+
+
+data_of_validation = {
+         "id": 5913706,
+         "name": "Kalyani Nayar I",
+         "email": "i_nayar_kalyani@howe.test",
+         "gender": "female",
+         "status": "active"
+      }
+
+"""
+possibility use Enums in validation -> "Genders", "Statuses"
+"""

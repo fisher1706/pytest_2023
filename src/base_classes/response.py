@@ -19,6 +19,9 @@ class Response:
             assert self.response_status == status_code, self
         return self
 
+    """
+    if test FAILED -> show all data of response
+    """
     def __str__(self):
         return \
             f"Status code: {self.response_status}\n" \

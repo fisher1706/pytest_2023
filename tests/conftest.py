@@ -86,15 +86,34 @@ def generate_item_type(get_db_session, get_item_type_generator, get_add_method, 
     print(f"delete from: {tables.ItemType} - id: {item.item_id}")
 
 
+"""
+добавляет новые параметры к тесту -> pytest_addoption + getting_env
+для этого используем hook - add_options
+arg parser -> парсинг данных из командной строки
+"""
+
+
 def pytest_addoption(parser):
+    print("\nstart addoption")
+    print(f"\nparser=: {parser.__dict__}")
     parser.addoption(
         '--env',
         default='development',
-        help='It is env variable where our tests will be run. Possible values: prod, development(default), qa'
+        choices=("development", "production"),
+        help='It is env variable where our tests will be run. '
+             'Possible values: '
+             'development(default), '
+             'production '
     )
+
+
+"""
+читает значение --env заданное hook add_options
+"""
 
 
 @pytest.fixture(autouse=True)
 def getting_env(request):
+    print(f"\nrequest_option:= {request.config.getoption}")
     env = request.config.getoption('--env')
     yield env

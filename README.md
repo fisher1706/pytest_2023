@@ -5,10 +5,10 @@
 # @pytest.fixture -> create in conftest.py
 # @pytest.mark.skip('[ISSUE-23414] Issue with network connection') -> skip test
 
-# parameters with test start: -v - detalization -> -s - to see "print" in tests
-
-
-
+# parameters with test start: 
+            -v - detalization
+            -s - to see "print" in tests
+            -vv - all information
 
 # to see help
 ```shell
@@ -62,6 +62,7 @@ pytest -k "not development"
 pytest --durations=0 -vv
 ```
 
+# -----------------------------------------ALLURE-----------------------------------------------------------------------
 # create Allure report -> add "--alluredir=allure_report_folder" -> "allure_report_folder" -> name of folder
 ```shell
 pytest tests/ --alluredir=allure_report_folder
@@ -70,3 +71,20 @@ pytest tests/ --alluredir=allure_report_folder
 ```shell
 allure serve allure_report_folder
 ```
+
+# -------------------------------------------PYTEST.INI-----------------------------------------------------------------
+# addopts= -s -v -> add in "pytest.ini" -> all tests start with parameter -v -s
+
+# ------------------------------------------HOOKS-----------------------------------------------------------------------
+# hooks -> methods in conftest.py -> run "before" and "after" tests
+
+# start test use hook "pytest_addoption"
+```shell
+pytest tests/something/experiments.py::test_option --env=production
+```
+
+# -----------------------------------------PYTEST WORK------------------------------------------------------------------
+# 1. Configuration 
+# 2. Collection 
+# 3. Running 
+# 4. Reporting 

@@ -3,7 +3,8 @@ import pytest
 
 @pytest.fixture()
 def get_testing_scenarios(request):
-    print(f"param: {request.param}")
+    print(f"\nrequest.__dict__ =: {request.__dict__}")
+    print(f"\nparam: {request.param}")
 
     if request.param == "scenario_1":
         return {"name": "John"}
@@ -29,5 +30,3 @@ def get_magic_method_two(get_number):
     def _wrapped(add_number):
         return add_number + get_number
     return _wrapped
-
-

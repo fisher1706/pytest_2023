@@ -56,15 +56,33 @@ def test_something_fifth(get_player_generator, localizations, loc):
     print(object_to_send)
 
 
+"""
+test -> get data from db
+"""
+
+
+@pytest.mark.skip(reason="don`t work from docker")
 def test_get_data_films(get_db_session):
     data = get_db_session.query(tables.Films).first()
     print(f"\ntitle: {data.title}")
 
 
+"""
+test -> delete data from db
+"""
+
+
+@pytest.mark.skip(reason="don`t work from docker")
 def test_try_to_delete_something(get_delete_method, get_db_session):
     get_delete_method(get_db_session, tables.ItemType, tables.ItemType.item_id == 3)
 
 
+"""
+test -> add data to db
+"""
+
+
+@pytest.mark.skip(reason="don`t work from docker")
 def test_try_to_add_test_data(get_db_session, get_add_method, get_item_type_generator):
     item = tables.ItemType(**get_item_type_generator.build())
     get_add_method(get_db_session, item)
@@ -73,7 +91,3 @@ def test_try_to_add_test_data(get_db_session, get_add_method, get_item_type_gene
 
 def test_try_to_add_test_data_new(generate_item_type):
     print(f"\nnew_item_id: {generate_item_type.item_id}")
-
-
-def test_failed():
-    assert 1 == 2

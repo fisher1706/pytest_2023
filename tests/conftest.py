@@ -43,6 +43,11 @@ def get_player_generator():
     return Player()
 
 
+"""
+to create db_session
+"""
+
+
 @pytest.fixture()
 def get_db_session():
     session = Session()
@@ -53,18 +58,30 @@ def get_db_session():
 
 
 def delete_test_data(session, table, filter_data):
+    print(f"\nfilter_data:= {filter_data}")
     session.query(table).filter(filter_data).delete()
     session.commit()
 
 
 def add_method(session, item):
+    print(f"\nitem:= {item}")
     session.add(item)
     session.commit()
+
+
+"""
+fixture: delete data from db
+"""
 
 
 @pytest.fixture()
 def get_delete_method():
     return delete_test_data
+
+
+"""
+fixture: add data to db
+"""
 
 
 @pytest.fixture()
@@ -114,6 +131,9 @@ def pytest_addoption(parser):
 
 @pytest.fixture(autouse=True)
 def getting_env(request):
+    """
+    description of fixture
+    """
     print(f"\nrequest_option:= {request.config.getoption}")
     env = request.config.getoption('--env')
     yield env

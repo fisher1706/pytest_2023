@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-FAILURES_FILE = Path()/"failures.txt"
+FAILURES_FILE = Path()/"tests/hooks_example_two/failures.txt"
 
 
 @pytest.hookimpl()

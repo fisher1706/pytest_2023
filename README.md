@@ -88,3 +88,25 @@ pytest tests/something/experiments.py::test_option --env=production
 # 2. Collection 
 # 3. Running 
 # 4. Reporting 
+
+# ------------------------------------------DOCKER----------------------------------------------------------------------
+# Эту команду мы запускаем чтобы собрать наш контейнер
+```shell
+docker build --build-arg env=development -t automation-tests .
+```
+
+# Эта команда нужна чтобы запустить наш созданный контейнер
+```shell
+docker run automation-tests
+```
+
+# Эти 2 команды нам нужны чтобы скопировать данные из контейнера и чтобы сгенерировать из результата репорт
+```shell
+docker cp $(docker ps -a -q | head -1):/usr/lessons/allureResults . && allure serve allureResults/
+```
+
+# Две команды ниже, помогут вам в экспериментах, чтобы после них почистить свой компьютер
+```shell
+docker rm $(docker ps -a -q)
+docker kill $(docker ps -q)
+```

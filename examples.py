@@ -1,38 +1,44 @@
-from db import session
-import tables
-from sqlalchemy.sql.expression import desc
+# from db import Session
+# import tables
+# from sqlalchemy.sql.expression import desc
+#
+# """
+# to see response of "sql" -> use ".subquery()" in the end
+# """
 
-
-result_1 = session.query(tables.Films.film_id, tables.Films.title).first()
-print(f"result_1: {result_1}")
-
-result_2 = session.query(tables.Films.film_id, tables.Films.title).all()
-print(f"result_2: {result_2}")
-
-result_3 = session.query(
-    tables.Films.film_id, tables.Films.title
-).filter(tables.Films.film_id == 5).one_or_none()
-print(f"result_3: {result_3}")
-
-result_4 = session.query(
-    tables.Films.film_id, tables.Films.title
-).filter(
-    tables.Films.film_id > 1,
-    tables.Films.film_id < 100
-).limit(1).offset(1).all()
-print(f"result_4: {result_4}")
-
-films_ids = session.query(tables.Films.film_id).filter(tables.Films.film_id > 0).subquery()
-print(f"films_ids: {films_ids}")
-
-result_5 = session.query(tables.Films.title).filter(tables.Films.film_id.in_(films_ids)).all()
-print(f"result_5: {result_5}")
-
-result_6 = session.query(
-    tables.Films.film_id,
-    tables.Films.title
-).order_by(desc(tables.Films.title)).all()
-print(f"result_6: {result_6}")
+# session = Session()
+#
+# result_1 = session.query(tables.Films.film_id, tables.Films.title).first()
+# print(f"\nresult_1: {result_1}")
+#
+# result_2 = session.query(tables.Films.film_id, tables.Films.title).all()
+# print(f"\nresult_2: {result_2}")
+#
+# result_3 = session.query(
+#     tables.Films.film_id, tables.Films.title
+# ).filter(tables.Films.film_id == 5).one_or_none()
+# print(f"\nresult_3: {result_3}")
+#
+# result_4 = session.query(
+#     tables.Films.film_id, tables.Films.title
+# ).filter(
+#     tables.Films.film_id > 1,
+#     tables.Films.film_id < 100
+# ).limit(1).offset(1).all()
+# print(f"\nresult_4: {result_4}")
+#
+# films_ids = session.query(tables.Films.film_id).filter(tables.Films.film_id > 0).subquery()
+# print(f"\nfilms_ids: {films_ids}")
+#
+# # TODO: investigate work "in_"
+# # result_5 = session.query(tables.Films.title).filter(tables.Films.film_id.in_(films_ids)).all()
+# # print(f"result_5: {result_5}")
+#
+# result_6 = session.query(
+#     tables.Films.film_id,
+#     tables.Films.title
+# ).order_by(desc(tables.Films.title)).all()
+# print(f"\nresult_6: {result_6}")
 
 
 """

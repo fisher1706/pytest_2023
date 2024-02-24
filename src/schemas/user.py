@@ -1,4 +1,4 @@
-from pydantic import BaseModel, validator
+from pydantic import BaseModel, field_validator
 from src.enums.user_enums import Genders, Statuses, UserErrors
 
 
@@ -9,7 +9,7 @@ class User(BaseModel):
     gender: Genders
     status: Statuses
 
-    @validator('email')
+    @field_validator('email')
     def check_that_dog_presented_in_email_address(cls, email):
         if '@' in email:
             return email

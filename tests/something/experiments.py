@@ -17,9 +17,11 @@ def test_my_magic_method(my_value):
 
 """
 передача параметров в фикстуру "get_testing_scenarios" -> "request.param" -> indirect=True - прямое выполнение
+если в "pytest_addoption" передали "production" - пропускаем тест
 """
 
 
+@pytest.mark.skipif("config.getoption('--env') == production")
 @pytest.mark.parametrize(
     "get_testing_scenarios",
     ["scenario_2"],

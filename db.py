@@ -9,13 +9,15 @@ echo=True -> to see "sql-request" created by alchemy
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base
-from configuration import CONNECTION_ROW
+# from configuration import CONNECTION_ROW
+from configuration import SettingsLoadDotEnv
 
 
 Model = declarative_base(name='Model')
 
 engine = create_engine(
-    CONNECTION_ROW,
+    # CONNECTION_ROW,
+    SettingsLoadDotEnv().DB_URL,
     # echo=True
 )
 
@@ -24,4 +26,3 @@ Session = sessionmaker(
     autoflush=False,
     autocommit=False
 )
-

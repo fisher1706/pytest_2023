@@ -32,7 +32,7 @@ pytest --fixtures tests/users/test_users.py
 
 # to run all tests from dir "tests"
 ```shell
-pytest tests/
+pytest tests/*
 ```
 
 # to see list of all tests

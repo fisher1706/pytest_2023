@@ -107,6 +107,8 @@ def generate_item_type(get_db_session, get_item_type_generator, get_add_method, 
 добавляет новые параметры к тесту -> pytest_addoption + getting_env
 для этого используем hook - add_options
 arg parser -> парсинг данных из командной строки
+
+1. добавляем хуком "pytest_addoption" переменную "environment" в "pytestconfig" - для "разделения тестов"
 """
 
 

@@ -110,3 +110,8 @@ docker cp $(docker ps -a -q | head -1):/usr/lessons/allureResults . && allure se
 docker rm $(docker ps -a -q)
 docker kill $(docker ps -q)
 ```
+
+# ------------------------------------------SOME_HOOK_EXAMPLE-----------------------------------------------------------
+```shell
+pytest tests/hooks_example_three/test_hooks_three.py
+```

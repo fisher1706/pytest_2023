@@ -6,6 +6,6 @@ def test_passed_three():
     assert True
 
 
-# @pytest.mark.skip
+@pytest.mark.skip
 def test_failed_two_three():
     assert False

@@ -1,0 +1,68 @@
+#-------------------------
+# My-GitHubAction-Basics
+#-------------------------
+
+name: My-GitHubAction-Basics
+env:
+  APPLICATION_NAME: "My Pytest"
+  DEPLOY_PACKAGE_NAME: "pytest-deploy-ver-${{ github.sha }}"
+  
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  my_testing:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print Hello Message In Testing
+        run: echo "Hello World From Testing Job"
+        
+      - name: Execute few command
+        run: |
+          echo "Print Message One"
+          echo "Print Message Two"
+          echo "Application name: ${{ env.APPLICATION_NAME }}"
+          
+      - name: List Current Folder Before
+        run: ls -la
+        
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+
+      - name: List Current Folder After
+        run: ls -la
+
+  my_deploy:
+    runs-on: ubuntu-latest
+    
+    needs: my_testing
+    
+    env:
+      VAR_1: "This is Job Level Variable_1"
+      VAR_2: "This is Job Level Variable_2"
+      
+    steps:
+      - name: Print Hello Message In Deploy
+        run: echo "Hello World From Deploy Job"
+
+      - name: Print Env Vars
+        run: |
+          echo "VAR_1 = ${{ env.VAR_1 }}
+          echo "VAR_2 = ${{ env.VAR_2 }}
+          echo "VAR_3 = $LOCAL_VAR"
+        env: 
+          LOCAL_VAR: "This Is Super Local Environment Variable"
+
+      - name: Print Deployment Package
+        run: echo "Deploy package name is ${{ env.DEPLOY_PACKAGE_NAME }}"
+
+      - name: Lets Tests Same Packages If They Are Here One
+        run: aws --version
+
+      - name: Lets Tests Same Packages If They Are Here Two
+        run: zip --version

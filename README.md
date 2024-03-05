@@ -63,6 +63,8 @@ pytest --durations=0 -vv
 ```
 
 # -----------------------------------------ALLURE-----------------------------------------------------------------------
+# install allure before
+
 # create Allure report -> add "--alluredir=allure_report_folder" -> "allure_report_folder" -> name of folder
 ```shell
 pytest tests/ --alluredir=allure_report_folder
@@ -107,8 +109,7 @@ docker cp $(docker ps -a -q | head -1):/usr/lessons/allureResults . && allure se
 
 # Две команды ниже, помогут вам в экспериментах, чтобы после них почистить свой компьютер
 ```shell
-docker rm $(docker ps -a -q)
-docker kill $(docker ps -q)
+docker rm $(docker ps -aq)
 ```
 
 # ------------------------------------------SOME_HOOK_EXAMPLE-----------------------------------------------------------

@@ -29,5 +29,6 @@ class Computer(BaseModel):
 
 
 if __name__ == '__main__':
-    comp = Computer.parse_obj(computer)
+    # comp = Computer.parse_obj(computer)
+    comp = Computer.model_validate(computer)
     print(comp)

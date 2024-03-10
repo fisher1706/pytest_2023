@@ -1,11 +1,11 @@
 # TODO: dont work into docker -> investigate in future
-# from db import Session
-# import tables
-# from sqlalchemy.sql.expression import desc
-#
-# """
-# to see response of "sql" -> use ".subquery()" in the end
-# """
+from db import Session
+import tables
+from sqlalchemy.sql.expression import desc
+
+"""
+to see response of "sql" -> use ".subquery()" in the end
+"""
 
 # session = Session()
 #

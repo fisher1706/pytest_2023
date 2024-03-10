@@ -8,10 +8,12 @@ class Response:
     def validate(self, schema):
         if isinstance(self.response_json, list):
             for item in self.response_json:
-                parsed_object = schema.parse_obj(item)
+                # parsed_object = schema.parse_obj(item)
+                parsed_object = schema.model_validate(item)
                 self.parsed_object = parsed_object
         else:
-            schema.parse_obj(self.response_json)
+            # schema.parse_obj(self.response_json)
+            schema.model_validate(self.response_json)
         return self
 
     def assert_status_code(self, status_code):

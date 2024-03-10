@@ -1,4 +1,4 @@
-# validate response by pydantic -> use method - parse_obj of class BaseModel
+# validate response by pydantic -> use method - [parse_obj] - old or [model_validate] - new of class BaseModel
 # from pydantic import BaseModel, Field
 # pydantic -> possibility write validators for field himself -> better use Field from pydantic
 
@@ -59,7 +59,7 @@ pytest -k "not development"
 
 # to see time of tests -> --durations=n - mark all tests with test time > n -> 0 - only for example -> -vv -> to see all
 ```shell
-pytest --durations=0 -vv
+pytest --durations=1 -vv
 ```
 
 # -----------------------------------------ALLURE-----------------------------------------------------------------------
@@ -67,11 +67,11 @@ pytest --durations=0 -vv
 
 # create Allure report -> add "--alluredir=allure_report_folder" -> "allure_report_folder" -> name of folder
 ```shell
-pytest tests/ --alluredir=allure_report_folder
+pytest tests/ --alluredir=allure-results
 ```
 
 ```shell
-allure serve allure_report_folder
+allure serve allure-results
 ```
 
 # -------------------------------------------PYTEST.INI-----------------------------------------------------------------
@@ -94,7 +94,8 @@ pytest tests/something/experiments.py::test_option --env=production
 # ------------------------------------------DOCKER----------------------------------------------------------------------
 # Эту команду мы запускаем чтобы собрать наш контейнер
 ```shell
-docker build --build-arg env=development -t automation-tests .
+#docker build --build-arg env=development -t automation-tests .
+docker build -t automation-tests .
 ```
 
 # Эта команда нужна чтобы запустить наш созданный контейнер
@@ -104,7 +105,7 @@ docker run automation-tests
 
 # Эти 2 команды нам нужны чтобы скопировать данные из контейнера и чтобы сгенерировать из результата репорт
 ```shell
-docker cp $(docker ps -a -q | head -1):/usr/lessons/allureResults . && allure serve allureResults/
+docker cp $(docker ps -a -q | head -1):/usr/lessons/allureResults .  && allure serve allure-result/
 ```
 
 # Две команды ниже, помогут вам в экспериментах, чтобы после них почистить свой компьютер
@@ -115,4 +116,9 @@ docker rm $(docker ps -aq)
 # ------------------------------------------SOME_HOOK_EXAMPLE-----------------------------------------------------------
 ```shell
 pytest tests/hooks_example_three/test_hooks_three.py
+```
+
+# start tests from docker-compose
+```shell
+docker-compose build && docker-compose up
 ```

@@ -50,7 +50,8 @@ def test_calculator(first_value, second_value, result, calculate):
 
 
 def test_pydantic_object():
-    comp = Computer.parse_obj(computer)
+    # comp = Computer.parse_obj(computer)
+    comp = Computer.model_validate(computer)
     print(comp.detailed_info)
     print(comp.detailed_info.physical.photo)
     print(comp.schema_json())

@@ -119,7 +119,7 @@ def pytest_addoption(parser):
         '--env',
         default='development',
         choices=("development", "production"),
-        help='It is env variable where our tests will be run. '
+        help='It is env variable where our tests_lifecoding will be run. '
              'Possible values: '
              'development(default), '
              'production '

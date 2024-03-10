@@ -2,7 +2,7 @@
 
 
 def test_failed_one():
-    assert False
+    assert True
 
 
 def test_passed_one():

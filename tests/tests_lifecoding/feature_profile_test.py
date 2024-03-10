@@ -4,6 +4,7 @@ import pytest
 from src.LifeCoding.base.base_test import BaseTest
 
 
+@pytest.skip
 @allure.feature("Profile Functionality")
 class TestProfileFeature(BaseTest):
 

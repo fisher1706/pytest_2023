@@ -1,7 +1,7 @@
 import pytest
 from random import randrange
 
-import tables
+# import tables
 from src.generators.player import Player
 from src.generators.item_type_generator import ItemsTypeBuilder
 from db import Session
@@ -94,13 +94,13 @@ def get_item_type_generator():
     return ItemsTypeBuilder()
 
 
-@pytest.fixture()
-def generate_item_type(get_db_session, get_item_type_generator, get_add_method, get_delete_method):
-    item = tables.ItemType(**get_item_type_generator.build())
-    get_add_method(get_db_session, item)
-    yield item
-    get_delete_method(get_db_session, tables.ItemType, tables.ItemType.item_id == item.item_id)
-    print(f"delete from: {tables.ItemType} - id: {item.item_id}")
+# @pytest.fixture()
+# def generate_item_type(get_db_session, get_item_type_generator, get_add_method, get_delete_method):
+#     item = tables.ItemType(**get_item_type_generator.build())
+#     get_add_method(get_db_session, item)
+#     yield item
+#     get_delete_method(get_db_session, tables.ItemType, tables.ItemType.item_id == item.item_id)
+#     print(f"delete from: {tables.ItemType} - id: {item.item_id}")
 
 
 """

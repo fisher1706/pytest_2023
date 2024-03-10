@@ -15,14 +15,14 @@ from configuration import SettingsLoadDotEnv
 
 Model = declarative_base(name='Model')
 
-engine = create_engine(
-    # CONNECTION_ROW,
-    SettingsLoadDotEnv().DB_URL,
-    # echo=True
-)
-
-Session = sessionmaker(
-    engine,
-    autoflush=False,
-    autocommit=False
-)
+# engine = create_engine(
+#     # CONNECTION_ROW,
+#     SettingsLoadDotEnv().DB_URL,
+#     # echo=True
+# )
+#
+# Session = sessionmaker(
+#     engine,
+#     autoflush=False,
+#     autocommit=False
+# )

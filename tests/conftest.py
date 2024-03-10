@@ -4,7 +4,7 @@ from random import randrange
 # import tables
 from src.generators.player import Player
 from src.generators.item_type_generator import ItemsTypeBuilder
-from db import Session
+# from db import Session
 
 
 @pytest.fixture(scope='session')
@@ -48,13 +48,13 @@ to create db_session
 """
 
 
-@pytest.fixture()
-def get_db_session():
-    session = Session()
-    try:
-        yield session
-    finally:
-        session.close()
+# @pytest.fixture()
+# def get_db_session():
+#     session = Session()
+#     try:
+#         yield session
+#     finally:
+#         session.close()
 
 
 def delete_test_data(session, table, filter_data):

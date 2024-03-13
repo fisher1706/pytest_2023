@@ -105,7 +105,7 @@ docker run automation-tests
 
 # Эти 2 команды нам нужны чтобы скопировать данные из контейнера и чтобы сгенерировать из результата репорт
 ```shell
-docker cp $(docker ps -a -q | head -1):/usr/lessons/allureResults .  && allure serve allure-result/
+docker cp $(docker ps -a -q | head -1):/usr/lessons/allure-results .  && allure serve allure-results/
 ```
 
 # Две команды ниже, помогут вам в экспериментах, чтобы после них почистить свой компьютер

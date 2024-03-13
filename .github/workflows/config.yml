@@ -16,7 +16,7 @@ jobs:
 
     # копируем код на виртуальную машину
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Run_tests_by_docker-compose
 

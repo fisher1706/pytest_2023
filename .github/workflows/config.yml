@@ -5,13 +5,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-  workflow_dispatch: 
-    inputs: 
-      name: 
-        description: "Person to greet"
-        default: "World"
-        required: true
-        type: sring
+
 
 jobs:
   home-tests:

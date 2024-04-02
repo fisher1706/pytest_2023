@@ -1,0 +1,1 @@
+{"uuid": "47940ded-72d8-48c6-a63c-c4cc1e95a6b1", "children": ["afba1221-25ab-4b9a-802b-2f8131125440"], "befores": [{"name": "getting_env", "status": "passed", "start": 1712059425609, "stop": 1712059425610}], "afters": [{"name": "getting_env::0", "status": "passed", "start": 1712059425619, "stop": 1712059425619}], "start": 1712059425609, "stop": 1712059425619}

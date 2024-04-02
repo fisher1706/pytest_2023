@@ -21,10 +21,9 @@ def test_my_magic_method(my_value):
 """
 
 
-@pytest.mark.skipif("config.getoption('--env') == production")
 @pytest.mark.parametrize(
     "get_testing_scenarios",
-    ["scenario_2"],
+    ["production"],
     indirect=True
 )
 def test_data_indirect(get_testing_scenarios):

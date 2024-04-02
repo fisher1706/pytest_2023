@@ -6,7 +6,7 @@ def get_testing_scenarios(request):
     print(f"\nrequest.__dict__ =: {request.__dict__}")
     print(f"\nparam: {request.param}")
 
-    if request.param == "scenario_1":
+    if request.param == "production":
         return {"name": "John"}
     elif request.param == "scenario_2":
         return {"name": "Ann"}

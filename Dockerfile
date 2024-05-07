@@ -30,7 +30,7 @@ RUN apk update && \
 WORKDIR ./usr/lessons
 
 # Создаём вольюм, для того чтобы иметь возможность получить данные после того, как контейнер закончит свою работу
-VOLUME /allure-result
+VOLUME /allure-results
 
 # Копируем отдельно наш файл с зависимостями
 COPY requirements.txt .

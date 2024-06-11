@@ -1,6 +1,6 @@
 allure-behave==2.13.5
-allure-pytest==2.13.0
-allure-python-commons==2.13.0
+allure-pytest==2.13.5
+allure-python-commons==2.13.5
 annotated-types==0.6.0
 attrs==22.2.0
 bcrypt==4.1.3

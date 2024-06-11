@@ -36,7 +36,7 @@ VOLUME /allure-results
 COPY requirements.txt .
 
 # Инстайлим наши зависимости внутри контейнера
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --verbose -r requirements.txt
 
 # Копируем наши файлики внутрь контейнера
 COPY . .

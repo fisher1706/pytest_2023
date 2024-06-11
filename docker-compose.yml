@@ -1,5 +1,5 @@
 services:
-  regression_ono:
+  regression_one:
     image: python:3.10-alpine
     build:
       context: .

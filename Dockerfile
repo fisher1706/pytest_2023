@@ -36,7 +36,7 @@ VOLUME /allure-results
 COPY requirements.txt .
 
 # Инстайлим наши зависимости внутри контейнера
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Копируем наши файлики внутрь контейнера
 COPY . .

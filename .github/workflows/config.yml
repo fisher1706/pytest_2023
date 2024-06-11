@@ -22,7 +22,7 @@ jobs:
         # продолжать работу - если ошибка
         run: | 
 #          docker-compose up --exit-code-from regression || True
-          docker-compose up --exit-code-from regression
+          docker-compose up regression
 #      - name: Generate_Allure_Report
 #        run: |
 #          sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"

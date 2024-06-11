@@ -8,7 +8,7 @@ on:
 
 
 jobs:
-  home-tests:
+  home-tests-one:
     runs-on: ubuntu-latest
 
 
@@ -20,7 +20,7 @@ jobs:
 
         # продолжать работу - если ошибка
         run: |
-          docker-compose up --exit-code-from regression || True
+          docker-compose up --exit-code-from regression_one || True
 
 #      - name: Generate_Allure_Report
 #        run: |
@@ -35,3 +35,17 @@ jobs:
 #          folder: allure-report
 #          clean: true
 
+
+  home-tests-two:
+    runs-on: ubuntu-latest
+
+
+    # копируем код на виртуальную машину
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run_tests_by_docker-compose
+
+        # продолжать работу - если ошибка
+        run: |
+          docker-compose up --exit-code-from regression_two || True

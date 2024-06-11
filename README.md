@@ -40,6 +40,11 @@ pytest tests/*
 pytest --collect-only
 ```
 
+# stop all tests after first failed test
+```shell
+pytest --maxfail=1
+```
+
 # run tests with mark
 # create markers -> 1. create descriptions in file "pytest.ini"
                     markers =
@@ -92,13 +97,13 @@ pytest tests/something/experiments.py::test_option --env=production
 # 4. Reporting 
 
 # ------------------------------------------DOCKER----------------------------------------------------------------------
-# Эту команду мы запускаем чтобы собрать наш контейнер
+# Эту команду мы запускаем, чтобы собрать наш контейнер
 ```shell
 #docker build --build-arg env=development -t automation-tests .
 docker build -t automation-tests .
 ```
 
-# Эта команда нужна чтобы запустить наш созданный контейнер
+# Эта команда нужна, чтобы запустить наш созданный контейнер
 ```shell
 docker run automation-tests
 ```
@@ -114,6 +119,11 @@ allure serve allure-results
 docker rm $(docker ps -aq)
 ```
 
+# Пробрасываем параметры в фикстуру
+```shell
+pytest tests/something/experiments.py::test_option --env=production
+```
+
 # ------------------------------------------SOME_HOOK_EXAMPLE-----------------------------------------------------------
 ```shell
 pytest tests/hooks_example_three/test_hooks_three.py
@@ -124,43 +134,7 @@ pytest tests/hooks_example_three/test_hooks_three.py
 docker-compose build && docker-compose up
 ```
 
-# В контексте тестирования с помощью PyTest "хуки" и "фикстуры" - это два ключевых концепта, 
-# которые помогают организовывать и выполнять тесты. Давай разберём их:
-
-# 1. **Фикстуры (Fixtures)**:
-#  - Фикстуры в PyTest - это функции, которые предоставляют предварительно настроенные ресурсы для выполнения тестов.
-#  - Они могут использоваться для подготовки данных, установки тестового окружения, создания объектов и т. д.
-#  - Фикстуры могут быть определены в рамках модуля или внешнего файла conftest.py и могут быть параметризованы.
-
-# Пример определения фикстуры:
-
-```python
-import pytest
-
-@pytest.fixture
-def some_resource():
-    resource = SomeResource()
-    # Предварительная настройка ресурса
-    yield resource
-    # Опциональное завершение работы с ресурсом после использования
-    resource.cleanup()
-```
-
-# 2. **Хуки (Hooks)**:
-#  - Хуки в PyTest - это специальные функции, которые выполняются автоматически на различных этапах выполнения тестов.
-#  - Они позволяют вам вмешиваться в процесс выполнения тестов и выполнять дополнительные действия перед и после тестов.
-#  - Позволяют настроить поведение PyTest до и после тестов, модулей, сессий и т. д.
-
-# Пример использования хука:
-
-```python
-import pytest
-
-def pytest_runtest_setup(item):
-    # Этот хук выполняется перед каждым тестом
-    print("Setup for test:", item.name)
-```
-
-# Таким образом, основное различие между фикстурами и хуками заключается в их предназначении: 
-# фикстуры предоставляют ресурсы для выполнения тестов, 
-# тогда как хуки позволяют настраивать и управлять самим процессом выполнения тестов.
+# Для параллельного запуска тестов используй плагин pytest-xdist, устанавливается как обычный пакет:
+# $ pip install pytest-xdist
+# Опция -n/--numprocesses задает количество процессов:
+# $ pytest -n8

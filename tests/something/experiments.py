@@ -38,7 +38,7 @@ def test_magic_method(get_magic_method_two):
 используется с фикстурой "getting_env"
 можно изменять значения --env запуск через командную строку
 
-pytest tests_lifecoding/something/experiments.py::test_option --env=production
+pytest tests/something/experiments.py::test_option --env=production
 """
 
 

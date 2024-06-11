@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run_tests_by_docker-compose
+      - name: Run_tests_by_docker
 
         # продолжать работу - если ошибка
         run: | 

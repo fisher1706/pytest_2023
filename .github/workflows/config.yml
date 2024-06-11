@@ -7,51 +7,10 @@ on:
     branches: [ "master" ]
 
 
-#jobs:
-#  home-tests:
-#    runs-on: ubuntu-latest
-#
-#
-#    # копируем код на виртуальную машину
-#    steps:
-#      - uses: actions/checkout@v3
-#
-#      - name: Run_tests_by_docker-compose
-#
-#        # продолжать работу - если ошибка
-#        run: |
-#          docker-compose up --exit-code-from regression || True
-#
-#      - name: Generate_Allure_Report
-#        run: |
-#          sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
-#
-#      # из документации git -> create [CI_TOKEN] before
-#      - name: Deploy to GitHub Pages
-#        uses: JamesIves/github-pages-deploy-action@v4
-#        with:
-#          token: ${{ secrets.CI_TOKEN }}
-#          branch: gh-pages
-#          folder: allure-report
-#          clean: true
-
-
 jobs:
-  home-tests-one:
+  home-tests:
     runs-on: ubuntu-latest
 
-    # копируем код на виртуальную машину
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run_tests_by_docker-compose
-
-        # продолжать работу - если ошибка
-        run: | 
-          docker-compose up --exit-code-from regression_one || True
-
-  home-tests-two:
-    runs-on: ubuntu-latest
 
     # копируем код на виртуальную машину
     steps:
@@ -61,4 +20,18 @@ jobs:
 
         # продолжать работу - если ошибка
         run: |
-          docker-compose up --exit-code-from regression_two || True
+          docker-compose up --exit-code-from regression || True
+
+      - name: Generate_Allure_Report
+        run: |
+          sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
+
+      # из документации git -> create [CI_TOKEN] before
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          branch: gh-pages
+          folder: allure-report
+          clean: true
+

@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./:usr/workspace
+#    volumes:
+#      - ./:usr/lessons
     command: /bin/sh -c "ls -la && pytest -s -v tests/* --alluredir=allure-results"
-    working_dir: /usr/workspace
+#    working_dir: /usr/lessons

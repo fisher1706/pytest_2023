@@ -21,16 +21,18 @@ RUN wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.30-r0/
 
 #RUN apk update && \
 #    apk add openjdk11-jre curl tar && \
-#    curl -o allure-2.13.8.tgz -Ls https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz && \
+#    curl -o allure-2.13.8.tgz -Ls https://github.com/allure-framework/allure2/releases/download/2.14.0/allure-2.14.0.tgz && \
 #    tar -zxvf allure-2.13.8.tgz -C /opt/ && \
 #    ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure && \
 #    rm allure-2.13.8.tgz
+
 
 # Указываем директорию в которой мы будем работать внутри докера
 WORKDIR ./usr/lessons
 
 # Создаём вольюм, для того чтобы иметь возможность получить данные после того, как контейнер закончит свою работу
-VOLUME /allure-results
+#VOLUME /allure-results
+
 
 # Копируем отдельно наш файл с зависимостями
 COPY requirements.txt .
@@ -44,5 +46,4 @@ COPY . .
 # Ну и наконец-то запускаем наши тесты
 #CMD pytest -m "$env" -s -v tests_lifecoding/* --alluredir=allureResults
 CMD pytest -s -v tests/* --alluredir=allure-results
-
 

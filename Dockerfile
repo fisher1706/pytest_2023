@@ -43,5 +43,5 @@ COPY . .
 
 # Ну и наконец-то запускаем наши тесты
 #CMD pytest -m "$env" -s -v tests_lifecoding/* --alluredir=allureResults
-#CMD pytest -s -v tests/* --alluredir=allure-results
+CMD pytest -s -v tests/* --alluredir=allure-results
 

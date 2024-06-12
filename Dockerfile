@@ -45,3 +45,4 @@ COPY . .
 #CMD pytest -m "$env" -s -v tests_lifecoding/* --alluredir=allureResults
 CMD pytest -s -v tests/* --alluredir=allure-results
 
+

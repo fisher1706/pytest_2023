@@ -23,12 +23,28 @@ jobs:
         run: | 
           docker-compose up --exit-code-from regression || true
 
-      - name: Generate Allure Report
+#      - name: Generate Allure Report
+#        run: |
+#          sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
+#      # из документации git -> create [CI_TOKEN] before
+#      - name: Deploy to GitHub Pages
+#        uses: JamesIves/github-pages-deploy-action@v4
+#        with:
+#          token: ${{ secrets.CI_TOKEN }}
+#          branch: gh-pages
+#          folder: allure-report
+#          clean: true
+
+      - name: Generate Allure report
         run: |
-          sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
-      # из документации git -> create [CI_TOKEN] before
+            docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
+  
+#      - name: Update Allure history
+#        run: |
+#          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
+
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           token: ${{ secrets.CI_TOKEN }}
           branch: gh-pages

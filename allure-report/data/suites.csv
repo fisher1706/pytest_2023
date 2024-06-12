@@ -1,0 +1,130 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","1","tests.something","test_something","","","","test_something_two[banned]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.something","test_something","","","","test_something_three[-10]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","1","tests.hooks_example_one","test_hooks_one","","","","test_passed_one",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_stderr",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","22","tests.something","test_something","","","","test_something_fifth[fr-fr_FR]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_output",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_divide[5-0--5-expectation3]",""
+"passed","Tue Jun 11 19:25:04 EEST 2024","Tue Jun 11 19:25:08 EEST 2024","4002","tests.users","test_users","","","","test_getting_user_list",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_ipaddress_attrs",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_add[1-1-2]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.something","test_something","","","","test_something_three[adssd]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_output_disabled",""
+"passed","Mon May 06 22:43:50 EEST 2024","Mon May 06 22:43:50 EEST 2024","0","tests.tests_lifecoding","feature_profile_test","TestProfileFeature","","","test_request_fixture_data",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:25:02 EEST 2024","10813","tests.tests_lifecoding","feature_profile_test","TestProfileFeature","","","Change profile name",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_using_param_fixture[1]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_divide[5--1--5-expectation2]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_add_with_type_error[1-1-2]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[cherry-300]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_three[adssd]",""
+"skipped","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_try_to_add_test_data_new",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[cherry-200]",""
+"skipped","Mon May 06 22:43:55 EEST 2024","Mon May 06 22:43:55 EEST 2024","0","tests.users","test_users","","","","test_another","
+    In that we try to check that 1 is equal 1
+    :return:
+    "
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_divide[5--1--5-expectation2]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_ipaddress_cmp_mask",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","1","tests.something","test_something","","","","test_something_two[active]",""
+"passed","Mon May 06 22:43:51 EEST 2024","Mon May 06 22:43:55 EEST 2024","4002","tests.users","test_users","","","","test_getting_user_list",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","1","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[apple-200]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","1","tests.something","test_something","","","","test_something_three[100]",""
+"passed","Tue Jun 11 19:25:08 EEST 2024","Tue Jun 11 19:25:08 EEST 2024","0","tests.users","test_users","","","","test_calculator[-1--2--3]","
+    In this test we check calculator
+    :param first_value:
+    :param second_value:
+    :param result:
+    :param calculate:
+    :return:
+    "
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_two[deleted]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","1","tests.something","test_something","","","","test_something_two[banned]",""
+"passed","Mon May 06 22:43:55 EEST 2024","Mon May 06 22:43:55 EEST 2024","0","tests.users","test_users","","","","test_calculator[-1--2--3]","
+    In this test we check calculator
+    :param first_value:
+    :param second_value:
+    :param result:
+    :param calculate:
+    :return:
+    "
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_three[-10]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.hooks_example_three","test_hooks_three","","","","test_passed_three",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_my_function",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.something","test_something","","","","test_something_four[account_status]",""
+"passed","Mon May 06 22:43:55 EEST 2024","Mon May 06 22:43:55 EEST 2024","0","tests.users","test_users","","","","test_calculator[1-2-3]","
+    In this test we check calculator
+    :param first_value:
+    :param second_value:
+    :param result:
+    :param calculate:
+    :return:
+    "
+"failed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","1","tests.test_ip_address","test_ip_address","","","","test_external_command",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_divide[5--1--5-expectation1]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","30","tests.something","test_something","","","","test_something_fifth[fr-fr_FR]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_ipaddress_cmp_raise",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_four[account_status]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.hooks_example_one","test_hooks_one","","","","test_failed_one",""
+"passed","Tue Jun 11 19:25:08 EEST 2024","Tue Jun 11 19:25:08 EEST 2024","1","tests.users","test_users","","","","test_calculator[1-2-3]","
+    In this test we check calculator
+    :param first_value:
+    :param second_value:
+    :param result:
+    :param calculate:
+    :return:
+    "
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_two[inactive]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.hooks_example_one","test_hooks_one","","","","test_failed_one",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_four[balance]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_add[5--1-4]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[banana-100]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.something","test_something","","","","test_something_four[balance]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[cherry-100]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_two[active]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_using_param_fixture[3]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.hooks_example_one","test_hooks_one","","","","test_passed_one",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.something","test_something","","","","test_something_four[localize]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_add[5--1-4]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_divide[1-2-0.5-expectation0]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.something","test_something","","","","test_something_two[deleted]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.hooks_example_two","test_hooks_two","","","","test_passed_two",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_add[1-1-2]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_ipaddress_cmp_equal",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.something","test_something","","","","test_something_four[avatar]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","1","tests.hooks_example_two","test_hooks_two","","","","test_failed_two",""
+"skipped","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.hooks_example_three","test_hooks_three","","","","test_failed_two_three",""
+"skipped","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.hooks_example_three","test_hooks_three","","","","test_failed_two_three",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[apple-300]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[banana-300]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_divide[5-0--5-expectation3]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.something","test_something","","","","test_something_one",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[banana-200]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.hooks_example_three","test_hooks_three","","","","test_passed_three",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.something","test_something","","","","test_something_two[inactive]",""
+"skipped","Tue Jun 11 19:25:08 EEST 2024","Tue Jun 11 19:25:08 EEST 2024","0","tests.users","test_users","","","","test_another","
+    In that we try to check that 1 is equal 1
+    :return:
+    "
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_divide[5--1--5-expectation1]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_divide[1-2-0.5-expectation0]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.tests_2024","test_main","TestCalculator","","","test_add_with_type_error[1-1-2]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_ipaddress_str_repr",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.something","test_something","","","","test_something_three[100]",""
+"passed","Mon May 06 22:43:40 EEST 2024","Mon May 06 22:43:49 EEST 2024","9572","tests.tests_lifecoding","feature_profile_test","TestProfileFeature","","","Change profile name",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_ipaddress_cmp_basic",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","1","tests.something","test_something","","","","test_something_three[0]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_ipaddress_int",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_three[0]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_four[localize]",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.hooks_example_two","test_hooks_two","","","","test_failed_two",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_fixtures[apple-100]",""
+"passed","Tue Jun 11 19:24:50 EEST 2024","Tue Jun 11 19:24:50 EEST 2024","0","tests.hooks_example_two","test_hooks_two","","","","test_passed_two",""
+"passed","Mon May 06 22:43:55 EEST 2024","Mon May 06 22:43:55 EEST 2024","4","tests.users","test_users","","","","test_pydantic_object",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_one",""
+"skipped","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.something","test_something","","","","test_try_to_add_test_data_new",""
+"passed","Mon May 06 22:43:39 EEST 2024","Mon May 06 22:43:39 EEST 2024","0","tests.something","test_something","","","","test_something_four[avatar]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_using_param_fixture[2]",""
+"passed","Tue Jun 11 19:24:51 EEST 2024","Tue Jun 11 19:24:51 EEST 2024","0","tests.test_ip_address","test_ip_address","","","","test_multiple_outputs",""
+"passed","Tue Jun 11 19:25:08 EEST 2024","Tue Jun 11 19:25:08 EEST 2024","24","tests.users","test_users","","","","test_pydantic_object",""
+"passed","Tue Jun 11 19:25:03 EEST 2024","Tue Jun 11 19:25:03 EEST 2024","0","tests.tests_lifecoding","feature_profile_test","TestProfileFeature","","","test_request_fixture_data",""

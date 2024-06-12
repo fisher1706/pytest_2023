@@ -21,7 +21,6 @@ jobs:
 
         # продолжать работу - если ошибка
         run: | 
-#          docker-compose up regression
           docker-compose up --exit-code-from regression || true
 
       - name: Generate Allure Report

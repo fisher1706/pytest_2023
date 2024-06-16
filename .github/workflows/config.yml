@@ -1,5 +1,4 @@
-
-name: Pytest-Home
+name: Regression_tests
 
 on:
   push:
@@ -11,7 +10,6 @@ on:
 jobs:
   regression-tests:
     runs-on: ubuntu-latest
-
 
     # копируем код на виртуальную машину
     steps:
@@ -25,11 +23,11 @@ jobs:
 
       - name: Generate Allure report
         run: |
-            docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
+            sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
   
-      - name: Update Allure history
-        run: |
-          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
+#      - name: Update Allure history
+#        run: |
+#          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5

@@ -24,6 +24,7 @@ pytest tests/users/test_users.py::test_getting_user_list
 ```shell
 pytest --setup-show tests/users/test_users.py::test_getting_user_list
 ```
+# ошибка в фикстуре сообщается не как FAIL, а как ERROR
 
 # to see all fixtures for file "test_users.py"
 ```shell
@@ -38,6 +39,22 @@ pytest tests/*
 # to see list of all tests
 ```shell
 pytest --collect-only
+```
+# Параметр --collect-only показывает, какие тесты будут выполняться с заданными параметрами и конфигурацией. 
+# Этот параметр удобно сначала показать, чтобы выходные данные можно было использовать 
+# в качестве ссылки для остальных примеров.
+# Параметр --collect-only полезен для проверки правильности выбора других опций, которые выбирают тесты перед запуском 
+# тестов. Мы будем использовать его снова с -k, чтобы показать, как это работает.
+
+# -k EXPRESSION
+
+# Параметр -k позволяет использовать выражение для определения функций тестирования.
+# Весьма мощная опция! Её можно использовать как ярлык для запуска отдельного теста, если имя уникально, или запустить 
+# набора тестов, которые имеют общий префикс или суффикс в их именах. Предположим, вы хотите запустить 
+# тесты test_failed_one() и test_passed_one(). Вы можете проверить фильтр с помощью: --collect-only:
+
+```shell
+pytest -k "failed or passed" --collect-only
 ```
 
 # stop all tests after first failed test
@@ -60,6 +77,11 @@ pytest -k development
 # run tests without mark "development"
 ```shell
 pytest -k "not development"
+```
+
+# run test with mark "development"
+```shell
+pytest -m development
 ```
 
 # to see time of tests -> --durations=n - mark all tests with test time > n -> 0 - only for example -> -vv -> to see all
@@ -138,3 +160,9 @@ docker-compose build && docker-compose up
 # $ pip install pytest-xdist
 # Опция -n/--numprocesses задает количество процессов:
 # $ pytest -n8
+
+
+# to see cash after test
+```shell
+pytest -q --cache-show
+```

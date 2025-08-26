@@ -55,5 +55,5 @@ def pytest_runtest_setup(item):
 • pytest --fixtures - показывает все доступные fixture (встроенные, из плагинов и най-
 денные в тестах и conftest.py). Добавление -v показывает в каких файлах находятся
 fixture и на какой строке определена функция
-• pytest --setup-show - показывает какие fixture запускаются и когдаbdd
+• pytest --setup-show - показывает какие fixture запускаются и когда
 """
